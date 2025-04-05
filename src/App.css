@@ -1,42 +1,66 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+html, body, #root, .app {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Helvetica', sans-serif; /* Tipografía temporal */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ===== SECCIÓN GORILLA ===== */
+.gorilla-section {
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  display: flex;
+  flex-direction: column;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.gorilla-logo {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.card {
-  padding: 2em;
+.logo-row {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.read-the-docs {
-  color: #888;
+/* Estilo base letras */
+.letter {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 54vw;
+  font-weight: 900;
+  color: black;
+  transform: scale(0.95);
+  position: relative;
 }
+
+/* Ajustes específicos letras */
+.letter-g { left: -1%; align-self: flex-start; }
+.letter-o { right: -1%; align-self: flex-start; }
+.letter-r { left: -1%; align-self: center; }
+.letter-il {
+  width: 50%; /* Mantiene el ancho asignado */
+  font-size: 50vw;
+  letter-spacing: -0.08em; /* Junta I y L */
+  transform: translateX(-40%); /* Desplaza hacia la izquierda */
+  margin-right: -10%; /* Permite que invada el espacio de R */
+  display: flex;
+  justify-content: flex-start; /* Alinea a la izquierda del contenedor */
+  padding-left: 5%; /* Compensa el desplazamiento */
+}
+.letter-l { left: -1%; align-self: flex-end; }
+.letter-a { right: -1%; align-self: flex-end; }

@@ -1,0 +1,75 @@
+/* ===== FUENTE HELVETICA ===== */
+:root {
+    --font-display: 'Helvetica', sans-serif;
+    --color-black: #000;
+    --scale-y: 1.5;
+    --font-size-base: 50vw; /* Reducido ligeramente para mejor ajuste */
+    --vertical-padding: 5vh; /* Margen vertical */
+    --horizontal-push: 3%; /* Ajuste horizontal */
+  }
+  
+  /* ===== ESTILOS MÓVILES ===== */
+  .gorilla-section {
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    overflow: hidden;
+    padding-bottom: var(--vertical-padding); /* Margen inferior */
+  }
+  
+  .gorilla-logo {
+    height: calc(100% - var(--vertical-padding)); /* Compensa el padding */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .logo-row {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    position: relative;
+    max-height: 30%; /* Controla altura de filas */
+  }
+  
+  /* Estilo base para todas las letras */
+  .letter {
+    font-family: var(--font-display);
+    font-size: var(--font-size-base);
+    font-weight: 900;
+    color: var(--color-black);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: scale(1, var(--scale-y));
+    overflow: visible;
+  }
+  
+  /* Ajustes específicos */
+  .letter-r {
+    left: calc(-1 * var(--horizontal-push));
+    align-self: center;
+  }
+  
+  .letter-il {
+    letter-spacing: -0.1em;
+    transform: scale(1, var(--scale-y)) translateX(-25%);
+    margin-right: var(--horizontal-push);
+    padding-left: 0.3em;
+  }
+  
+  /* Ajustes para letras inferiores */
+  .letter-l, .letter-a {
+    align-self: flex-end;
+    transform: scale(1, var(--scale-y)) translateY(calc(-1 * var(--vertical-padding))); /* Eleva ligeramente */
+  }
+  
+  /* Ajuste fino para L y A */
+  .letter-l {
+    left: calc(-1 * var(--horizontal-push));
+  }
+  
+  .letter-a {
+    right: calc(-1 * var(--horizontal-push));
+  }
